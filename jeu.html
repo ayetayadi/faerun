@@ -1,0 +1,50 @@
+<!-- jeu.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Bataille de Faerun</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <div id="castles">
+            <div id="castleA">
+                <h2 id="castleATitle" class="chateauAColor">Château A</h2>
+                <img src="C:\\Users\ayeta\Downloads\chateau.jpg"/>
+                <p>Nombre de carreaux: <span id="nbCarreaux"></span></p>
+            </div>
+            <div id="board">
+                <!-- Définit le nombre de carreaux du plateau selon le choix de l'utilisateur -->
+            </div>
+            <div id="castleB">
+                <h2 id="castleBTitle" class="chateauBColor">Château B</h2>
+                <img src="C:\\Users\ayeta\Downloads\chateau.jpg"/>
+                
+            </div>
+            <div id="castleALog" class="log"></div>
+            <div class="addUnits">
+                <button id="addNainA">Ajouter Nain (1)</button>
+                <button id="addChefNainA">Ajouter Chef Nain (3)</button>
+                <button id="addElfeA">Ajouter Elfe (2)</button>
+                <button id="addChefElfeA">Ajouter Chef Elfe (4)</button>
+            </div>
+            <div id="castleBLog" class="log"></div>
+                <div class="addUnits">
+                    <button id="addNainB">Ajouter Nain (1)</button>
+                    <button id="addChefNainB">Ajouter Chef Nain (3)</button>
+                    <button id="addElfeB">Ajouter Elfe (2)</button>
+                    <button id="addChefElfeB">Ajouter Chef Elfe (4)</button>
+                </div>
+                
+        </div>
+        <div id="turn">
+            <p id="turnCount">Tour <span id="turnCounter">0</span> </p>
+            <button id="Turn">Jouer un tour</button>
+        </div>
+    </div>
+
+    <script src="script2.js"></script>
+</body>
+</html>
