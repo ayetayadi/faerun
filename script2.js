@@ -1,4 +1,25 @@
 // script2.js
+
+// Récupérer les éléments HTML des châteaux A et B ainsi que de leurs consoles
+const castleAElement = document.getElementById("castleA");
+const castleBElement = document.getElementById("castleB");
+const consoleAElement = document.getElementById("consoleA");
+const consoleBElement = document.getElementById("consoleB");
+
+// Définir les objets représentant les châteaux A et B
+const castleA = {
+    resources: 3,
+    consoleElement: consoleAElement,
+    trainingQueue: []
+};
+
+const castleB = {
+    resources: 3,
+    consoleElement: consoleBElement,
+    trainingQueue: []
+};
+
+
 document.addEventListener("DOMContentLoaded", function() {
     // Gestionnaire de clic pour terminer le tour
     document.getElementById('Turn').addEventListener('click', function() {
@@ -39,14 +60,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Mettre à jour le nombre de carreaux affiché dans le HTML
     document.getElementById('nbCarreaux').textContent = carreaux;
-    // Mettre à jour le nombre de carreaux du plateau
-    const board = document.getElementById('board');
-    board.innerHTML = ''; // Réinitialiser le contenu du plateau
-    for (let i = 0; i < carreaux; i++) {
-        const tile = document.createElement('div');
-        tile.classList.add('tile');
-        board.appendChild(tile);
+
+    // Générer les carreaux dynamiquement
+    for (let i = 1; i <= carreaux; i++) {
+        // Créer un nouveau div pour chaque carreau
+        const carreauDiv = document.createElement('div');
+        carreauDiv.classList.add('inputConsole');
+        carreauxContainer.appendChild(carreauDiv);
     }
+
 
     const chateauAColor = params.get('chateauA');
     const chateauBColor = params.get('chateauB');
